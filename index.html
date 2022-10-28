@@ -3,6 +3,9 @@
 
 {% assign devices = "" | split: " " %}
 {% for device in site.data.devices %}
+{% if device.release.last %}
+  {% assign device[1].release =  device[1].release.last.first[1]%}
+{% endif %}
 {% assign devices = devices | push: device[1] %}
 {% endfor %}
 {% assign sorted = devices | sort_natural: 'versions.last', | reverse | sort_natural: 'release' | reverse %}
@@ -23,13 +26,7 @@
     <td><a href="https://wiki.lineageos.org/devices/{{ device.codename }}/">
       {{ device.codename }}
     </a></td>
-    <td>
-    {% if device.release.last %}
-      {{ device.release.last.first[1] }}
-    {% else %}
-      {{ device.release }}
-    {% endif %}
-    </td>
+    <td>{{ device.release }}</td>
     <td>{{ device.soc }}</td>
     <td>{{ device.versions.last }}</td>
   </tr>
