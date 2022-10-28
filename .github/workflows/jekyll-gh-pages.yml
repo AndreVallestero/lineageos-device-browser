@@ -38,7 +38,7 @@ jobs:
           cd lineage_wiki
           git sparse-checkout set _data/devices
           mv _data/devices ../_data
-          rm ../lineage_wiki
+          rm -r ../lineage_wiki
       - name: Print Directory
         run: ls
       - name: Setup Pages
