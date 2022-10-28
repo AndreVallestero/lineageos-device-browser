@@ -24,10 +24,10 @@
       {{ device.codename }}
     </a></td>
     <td>
-    {% if device.release.last -%}
-      {% device.release.last -%}
+    {% if device.release.last %}
+      {% device.release.last %}
     {% else %}
-      {% device.release -%}
+      {% device.release %}
     {% endif %}
     </td>
     <td>{{ device.soc }}</td>
