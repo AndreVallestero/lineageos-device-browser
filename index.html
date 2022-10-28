@@ -3,10 +3,10 @@
 
 {% assign devices = "" | split: " " %}
 {% for device in site.data.devices %}
-{% if device[1].release.last %}
-  {% assign device[1].release = device[1].release.last.first[1] %}
-{% endif %}
 {% assign devices = devices | push: device[1] %}
+{% if device[1].release.last %}
+  {% assign devices.last.release = device[1].release.first.first[1] %}
+{% endif %}
 {% endfor %}
 {% assign sorted = devices | sort_natural: 'versions.last' | reverse | sort_natural: 'release' | reverse %}
 
