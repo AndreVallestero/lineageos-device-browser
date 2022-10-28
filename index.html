@@ -11,16 +11,15 @@
     <th>Latest LOS</th>
   </tr>
 {% for device in site.data.devices %}
-{% assign device = device[1] %}
   <tr>
-    <td>{{ device.vendor }}</td>
-    <td>{{ device.name }}</td>
+    <td>{{ device[1].vendor }}</td>
+    <td>{{ device[1].name }}</td>
     <td><a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
-      {{ device.codename }}
+      {{ device[1].codename }}
     </a></td>
-    <td>{{ device.release }}</td>
-    <td>{{ device.soc }}</td>
-    <td>{{ device.versions.last }}</td>
+    <td>{{ device[1].release }}</td>
+    <td>{{ device[1].soc }}</td>
+    <td>{{ device[1].versions.last }}</td>
   </tr>
 {% endfor %}
 </table> 
