@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>Vendor</th>
+    <th>Name</th>
+    <th>Codename</th>
+    <th>Release Date</th>
+    <th>SOC</th>
+    <th>Latest LOS</th>
+  </tr>
+  {}
+</table> 
