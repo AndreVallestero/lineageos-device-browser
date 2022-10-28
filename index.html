@@ -1,11 +1,22 @@
 ---
 ---
-<ul>
+
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Codename</th>
+    <th>Release Date</th>
+    <th>SOC</th>
+  </tr>
 {% for device in site.data.devices %}
-  <li>
-    <a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
-      {{ device[1].codename }}
-    </a>
-  </li>
+{% device = device[1] %}
+  <tr>
+    <td>{{ device.codename }}</td>
+    <td><a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
+      {{ device.codename }}
+    </a></td>
+    <td>{{ device.release }}</td>
+    <td>{{ device.soc }}</td>
+  </tr>
 {% endfor %}
-</ul>
+</table> 
