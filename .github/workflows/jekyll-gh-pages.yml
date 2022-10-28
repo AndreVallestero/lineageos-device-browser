@@ -39,6 +39,10 @@ jobs:
           git sparse-checkout set _data/devices
           mv _data/devices ../_data
           rm -r ../lineage_wiki
+      - name: Sanity Check
+        run: |
+          ls .
+          cat _data/devices/bacon.yml
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
