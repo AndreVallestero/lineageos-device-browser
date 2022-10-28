@@ -11,7 +11,7 @@
 {% for device in site.data.devices %}
   <li>
     <a href="https://wiki.lineageos.org/devices/{{ device.codename }}">
-      Codename: {{ device.codename }}
+      Codename: {{ device[1].codename }}
     </a>
   </li>
   <li>
