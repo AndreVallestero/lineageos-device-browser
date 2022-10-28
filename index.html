@@ -4,7 +4,7 @@
 {% assign devices = "" | split: " " %}
 {% for device in site.data.devices %}
 {% if device[1].release.last %}
-  {% device[1].release = device[1].release.last.first[1] %}
+  {% assign device[1].release = device[1].release.last.first[1] %}
 {% endif %}
 {% assign devices = devices | push: device[1] %}
 {% endfor %}
