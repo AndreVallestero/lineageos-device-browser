@@ -1,9 +1,9 @@
 <body>
 <ul>
-{% for member in site.data.members %}
+{% for device in site.data.devices %}
   <li>
-    <a href="https://github.com/{{ member.github }}">
-      {{ member.name }}
+    <a href="https://wiki.lineageos.org/devices/<codename>{{ device.codename }}">
+      {{ device.codename }}
     </a>
   </li>
 {% endfor %}
