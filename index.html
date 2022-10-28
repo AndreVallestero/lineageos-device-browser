@@ -3,20 +3,24 @@
 
  <table>
   <tr>
+    <th>Vendor</th>
     <th>Name</th>
     <th>Codename</th>
     <th>Release Date</th>
     <th>SOC</th>
+    <th>Latest LOS</th>
   </tr>
 {% for device in site.data.devices %}
 {% device = device[1] %}
   <tr>
-    <td>{{ device.codename }}</td>
+    <td>{{ device.vendor }}</td>
+    <td>{{ device.name }}</td>
     <td><a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
       {{ device.codename }}
     </a></td>
     <td>{{ device.release }}</td>
     <td>{{ device.soc }}</td>
+    <td>{{ device.versions.last }}</td>
   </tr>
 {% endfor %}
 </table> 
