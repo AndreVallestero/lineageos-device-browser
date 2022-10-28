@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Download LineageOS Wiki
+      - name: Download LineageOS Device Data
         run: |
           mkdir _data
           git clone --depth 1 --filter=blob:none --sparse https://github.com/LineageOS/lineage_wiki.git
@@ -39,8 +39,6 @@ jobs:
           git sparse-checkout set _data/devices
           mv _data/devices ../_data
           rm -r ../lineage_wiki
-      - name: Print Directory
-        run: ls
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
@@ -50,8 +48,6 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      - name: Print Directory Again
-        run: ls
 
   # Deployment job
   deploy:
