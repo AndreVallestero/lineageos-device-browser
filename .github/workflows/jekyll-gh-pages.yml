@@ -29,12 +29,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Device Data
-        uses: actions/checkout@master
-        with:
-          name: LineageOS/lineage_wiki
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Download LineageOS Wiki
+        run: git clone https://github.com/LineageOS/lineage_wiki.git
+      - name: Print Directory
+        run: ls
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
@@ -44,7 +44,7 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-      - name: Print Directory
+      - name: Print Directory Again
         run: ls
 
   # Deployment job
