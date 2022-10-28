@@ -26,13 +26,6 @@ def clean_release(release):
         return str(release)
     return release
 
-def clean_soc(soc):
-    if isinstance(soc, str):
-        return soc
-    if isinstance(soc[i], str):
-        return soc[i]
-    return list(soc[i].values())[0]
-
 # Parse yaml
 devices = []
 for f in listdir(DEVICES_DIR):
@@ -87,7 +80,7 @@ for f in listdir(DEVICES_DIR):
             devices.append(subdevice)
     else:
         device["release"] = clean_release(device["release"])
-        device["soc"] = clean_soc(device["soc"])
+        device["soc"] = device["soc"] if isinstance(device["soc"], str) else device["soc"][0]
         devices.append(device)
 
 # Secondary sort by LOS version
