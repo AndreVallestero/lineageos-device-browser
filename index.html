@@ -5,7 +5,7 @@
 {%- for device in site.data.devices %}
 {%- assign devices = devices | push: device[1] %}
 {%- endfor %}
-{%- assign sorted = devices | sort_natural: 'versions.last' | sort_natural: 'release' | reverse %}
+{%- assign sorted = devices | sort: 'versions.last' | sort: 'release' | reverse %}
 
  <table>
   <tr>
