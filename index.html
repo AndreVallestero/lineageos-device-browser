@@ -1,21 +1,11 @@
 ---
 ---
-
-
-
-<h2> Device: {{ site.data.devices.bacon}} </h2>
-
-<h2> Codename: {{ site.data.devices.bacon.codename}} </h2>
-
 <ul>
 {% for device in site.data.devices %}
   <li>
-    <a href="https://wiki.lineageos.org/devices/{{ device.codename }}">
+    <a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
       Codename: {{ device[1].codename }}
     </a>
-  </li>
-  <li>
-    {{ device }}
   </li>
 {% endfor %}
 </ul>
