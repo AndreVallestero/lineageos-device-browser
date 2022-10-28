@@ -44,6 +44,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      - name: Print Directory
+        run: ls
 
   # Deployment job
   deploy:
