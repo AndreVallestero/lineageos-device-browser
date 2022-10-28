@@ -16,16 +16,16 @@
     <th>SOC</th>
     <th>Latest LOS</th>
   </tr>
-{% for device in devices %}
+  {% for device in sorted %}
   <tr>
     <td>{{ device.vendor }}</td>
     <td>{{ device.name }}</td>
-    <td><a href="https://wiki.lineageos.org/devices/{{ device.codename }}">
+    <td><a href="https://wiki.lineageos.org/devices/{{ device.codename }}/">
       {{ device.codename }}
     </a></td>
     <td>{{ device.release }}</td>
     <td>{{ device.soc }}</td>
     <td>{{ device.versions.last }}</td>
   </tr>
-{% endfor %}
+  {% endfor %}
 </table> 
