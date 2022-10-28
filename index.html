@@ -25,7 +25,7 @@
     </a></td>
     <td>
     {% if device.release.last %}
-      {{ device.release.last }}
+      {{ device.release.last[1] }}
     {% else %}
       {{ device.release }}
     {% endif %}
