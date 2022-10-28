@@ -11,7 +11,7 @@
     <th>Latest LOS</th>
   </tr>
 {% for device in site.data.devices %}
-{% device = device[1] %}
+{% assign device = device[1] %}
   <tr>
     <td>{{ device.vendor }}</td>
     <td>{{ device.name }}</td>
