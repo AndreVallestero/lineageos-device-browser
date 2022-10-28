@@ -12,3 +12,4 @@ Browse LineageOS supported devices in a tabular format
 - Make each column sortable by clicking on the column header
 - Slightly alternate color between rows
 - Add links to device XDA page
+- Make the html compliant / up-to-spec
