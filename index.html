@@ -1,6 +1,12 @@
 ---
 ---
 
+{%- assign devices = "" | split: " " %}
+{%- for device in site.data.devices %}
+{%- assign devices = devices | push: device[1] %}
+{%- endfor %}
+{%- assign sorted = devices | sort_natural: 'versions.last' | sort_natural: 'release' %}
+
  <table>
   <tr>
     <th>Vendor</th>
@@ -10,16 +16,16 @@
     <th>SOC</th>
     <th>Latest LOS</th>
   </tr>
-{% for device in site.data.devices %}
+{% for device in devices %}
   <tr>
-    <td>{{ device[1].vendor }}</td>
-    <td>{{ device[1].name }}</td>
-    <td><a href="https://wiki.lineageos.org/devices/{{ device[1].codename }}">
-      {{ device[1].codename }}
+    <td>{{ device.vendor }}</td>
+    <td>{{ device.name }}</td>
+    <td><a href="https://wiki.lineageos.org/devices/{{ device.codename }}">
+      {{ device.codename }}
     </a></td>
-    <td>{{ device[1].release }}</td>
-    <td>{{ device[1].soc }}</td>
-    <td>{{ device[1].versions.last }}</td>
+    <td>{{ device.release }}</td>
+    <td>{{ device.soc }}</td>
+    <td>{{ device.versions.last }}</td>
   </tr>
 {% endfor %}
 </table> 
