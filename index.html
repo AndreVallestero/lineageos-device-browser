@@ -1,11 +1,11 @@
 ---
 ---
 
-{%- assign devices = "" | split: " " %}
-{%- for device in site.data.devices %}
-{%- assign devices = devices | push: device[1] %}
-{%- endfor %}
-{%- assign sorted = devices | sort: 'versions.last' | sort: 'release' | reverse %}
+{% assign devices = "" | split: " " %}
+{% for device in site.data.devices %}
+{% assign devices = devices | push: device[1] %}
+{% endfor %}
+{% assign sorted = devices | sort: 'versions.last' | sort: 'release' %}
 
  <table>
   <tr>
