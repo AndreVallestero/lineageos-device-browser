@@ -33,12 +33,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Download LineageOS Wiki
         run: |
-        mkdir _data
-        git clone --depth 1 --filter=blob:none --sparse https://github.com/LineageOS/lineage_wiki.git
-        cd lineage_wiki
-        git sparse-checkout set _data/devices
-        mv _data/devices ../_data
-        rm ../lineage_wiki
+          mkdir _data
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/LineageOS/lineage_wiki.git
+          cd lineage_wiki
+          git sparse-checkout set _data/devices
+          mv _data/devices ../_data
+          rm ../lineage_wiki
       - name: Print Directory
         run: ls
       - name: Setup Pages
