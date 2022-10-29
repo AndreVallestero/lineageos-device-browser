@@ -83,8 +83,10 @@ for f in listdir(DEVICES_DIR):
         device["soc"] = device["soc"] if isinstance(device["soc"], str) else device["soc"][0]
         devices.append(device)
 
-# Tetrary sort be Name
-devices.sort(key=lambda device: device["name"])
+# Quinary sort by Name
+devices.sort(key=lambda device: device["name"], reverse=True)
+# Quaternary sort by SOC
+devices.sort(key=lambda device: device["soc"], reverse=True)
 # Tertiary sort by Vendor
 devices.sort(key=lambda device: device["vendor"])
 # Secondary sort by LOS version
