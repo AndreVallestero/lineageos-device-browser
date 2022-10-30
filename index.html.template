@@ -18,7 +18,7 @@ var lastIndex = -1, sortDirection = 1;
 const tbody = document.getElementsByTagName("tbody")[0];
 const headers = document.getElementsByTagName("th");
 for (let i = 0; i < headers.length; ++i)
-	headers[i].addEventListener('click', function() {sortColumn(i);});
+	headers[i].addEventListener('click', function() {{sortColumn(i);}});
 
 function sortColumn(index) {{
 	sortDirection = index === lastIndex ? sortDirection * -1 : 1;
