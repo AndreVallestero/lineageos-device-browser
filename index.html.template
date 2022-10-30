@@ -21,6 +21,14 @@ a {{
 tr:nth-child(even) {{
 	background: #f6fafa
 }}
+
+header {{
+	text-align: center
+}}
+
+table {{
+	margin: auto
+}}
 </style>
 </head>
 
