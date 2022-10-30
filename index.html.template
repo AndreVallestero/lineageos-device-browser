@@ -1,3 +1,29 @@
+<head>
+<style>
+body {{
+	font-family: roboto,helvetica,arial,sans-serif;
+	background-color:#fff;
+	color:#3c4858;
+	font-weight:300
+}}
+
+a:hover, a:focus {{
+	color: #18636b;
+	text-decoration: underline
+}}
+
+a {{
+	color:#167c80;
+	font-weight:400;
+	text-decoration-line:none
+}}
+
+tr:nth-child(even) {{
+	background: #f6fafa
+}}
+</style>
+</head>
+
 <header>
   <a href="https://github.com/AndreVallestero/lineageos-device-browser">Help improve (and name) this open source project on Github</a>
 </header>
