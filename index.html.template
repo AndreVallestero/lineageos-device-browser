@@ -12,3 +12,26 @@
   </tr>
   {}
 </table> 
+<script>
+"use strict";
+var lastIndex = -1, sortDirection = 1;
+const tbody = document.getElementsByTagName("tbody")[0];
+const headers = document.getElementsByTagName("th");
+for (let i = 0; i < headers.length; ++i) {
+    headers[i].addEventListener('click', function() {
+		sortColumn(i);
+    });
+}
+function sortColumn(index) {
+	sortDirection = index === lastIndex ? sortDirection * -1 : 1;
+	lastIndex = index;
+	const oldRows = Array.from(tbody.getElementsByTagName("tr"));
+	tbody.replaceChildren(oldRows[0],
+		...oldRows.slice(1).sort(function (rowA, rowB) {
+			const cellA = rowA.children[index].innerText;
+			const cellB = rowB.children[index].innerText;
+			return ((cellA > cellB) - (cellB > cellA)) * sortDirection;
+		}
+	))
+}
+</script>
