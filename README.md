@@ -10,6 +10,14 @@ Try it out here: https://andrevallestero.github.io/lineageos-device-browser
 
 If you have an unmaintained deivce, the ROM will not be available on the official site. I suggest checking https://lineageosroms.com, and if a ROM exists, verify it via checksum on the official site.
 
+## Other ROMs
+
+My priorities when choosing a ROM are Security, Privacy, and Performance. With that in mind, my prefered ROMs are:
+
+1. GrapheneOS
+1. CalyxOS (use this if you need Google services)
+1. LineageOS (use this if your device isn't supported by the other 2)
+
 ## Contributing
 
 Accepting feature requests and PRs!
