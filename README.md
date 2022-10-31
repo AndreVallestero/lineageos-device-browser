@@ -17,7 +17,7 @@ If your device isn't on this list at all, I would suggest checking out the XDA p
 My priorities when choosing a ROM are Security, Privacy, and Performance. With that in mind, my prefered ROMs are:
 
 1. GrapheneOS
-1. CalyxOS (use this if you need Google services)
+1. CalyxOS
 1. LineageOS (use this if your device isn't supported by the other 2)
 
 ## Contributing
