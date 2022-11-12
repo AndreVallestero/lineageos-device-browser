@@ -33,7 +33,8 @@ table {{
 </head>
 
 <header>
-  <a href="https://github.com/AndreVallestero/lineageos-device-browser">Help improve (and name) this open source project on Github</a>
+  <a href="https://github.com/AndreVallestero/lineageos-device-browser">Help improve (and name) this open source project on Github</a> | 
+  this page was last updated on {}
 </header>
 <table>
   <tr>
