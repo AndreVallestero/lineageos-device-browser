@@ -95,6 +95,7 @@ devices.sort(key=lambda device: device["versions"][-1], reverse=True)
 devices.sort(key=lambda device: device["release"], reverse=True)
 
 html_rows = "".join(DEVICE_TEMPLATE.format(
+    date.today().strftime("%B %d, %Y"),
     device["vendor"],
     device["name"],
     device["codename"],
