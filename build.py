@@ -95,7 +95,6 @@ devices.sort(key=lambda device: device["versions"][-1], reverse=True)
 devices.sort(key=lambda device: device["release"], reverse=True)
 
 html_rows = "".join(DEVICE_TEMPLATE.format(
-    date.today().strftime("%B %d, %Y"),
     device["vendor"],
     device["name"],
     device["codename"],
@@ -105,7 +104,10 @@ html_rows = "".join(DEVICE_TEMPLATE.format(
     device["versions"][-1]) for device in devices)
 
 template = open("index.html.template").read()
-generated = template.format(html_rows)
+generated = template.format(
+    date.today().strftime("%B %d, %Y"),
+    html_rows
+)
 mkdir(OUT_DIR)
 open(OUT_DIR + "index.html", "w").write(generated)
     
