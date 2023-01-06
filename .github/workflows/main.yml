@@ -43,7 +43,7 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with custom Python Builder
         run: |
-          pip install editdistance
+          pip install pyyaml editdistance
           python build.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
