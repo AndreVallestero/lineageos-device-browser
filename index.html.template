@@ -18,6 +18,10 @@ a {{
 	text-decoration-line:none
 }}
 
+th {{
+	cursor: pointer
+}}
+
 tr:nth-child(even) {{
 	background: #f6fafa
 }}
