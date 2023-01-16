@@ -1,5 +1,4 @@
-# pip install pyyaml
-# pip install editdistance
+# pip install pyyaml editdistance
 
 from os import listdir, mkdir
 from datetime import date
@@ -80,7 +79,12 @@ for f in listdir(DEVICES_DIR):
             devices.append(subdevice)
     else:
         device["release"] = clean_release(device["release"])
-        device["soc"] = device["soc"] if isinstance(device["soc"], str) else device["soc"][0]
+        soc = device["soc"]
+        if not isinstance(soc, str):
+            if isinstance(soc[0], str):
+                device["soc"] = soc[0]
+            else:
+                device["soc"] = list(soc[i].values())[0]
         devices.append(device)
 
 # Quinary sort by Name
@@ -110,6 +114,3 @@ generated = template.format(
 )
 mkdir(OUT_DIR)
 open(OUT_DIR + "index.html", "w").write(generated)
-    
-          
-
