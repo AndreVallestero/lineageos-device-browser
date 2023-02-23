@@ -69,9 +69,11 @@ for f in listdir(DEVICES_DIR):
                     
             
             soc = device["soc"]
+            if i >= len(soc): i = 0            
+
             if isinstance(soc, str):
                 subdevice["soc"] = soc
-            elif i < len(soc) and isinstance(soc[i], str):
+            elif isinstance(soc[i], str):
                 subdevice["soc"] = soc[i]
             else:
                 subdevice["soc"] = list(soc[i].values())[0]
