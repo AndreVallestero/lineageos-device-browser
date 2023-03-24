@@ -19,7 +19,8 @@ My priorities when choosing a ROM are Security, Privacy, and Performance. With t
 1. GrapheneOS
 1. CalyxOS
 1. /e/OS
-1. LineageOS (use this if your device isn't supported by the other 2)
+1. iodéOS
+1. LineageOS (use this if your device isn't supported by the other 4)
 
 ## Contributing
 
