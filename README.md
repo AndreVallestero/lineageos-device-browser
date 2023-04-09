@@ -14,14 +14,16 @@ If your device isn't on this list at all, I would suggest checking out the XDA p
 
 ## Other ROMs
 
-My priorities when choosing a ROM are Security, Privacy, and Performance. With that in mind, my prefered ROMs are:
+My priorities when choosing a ROM are Security, Privacy, and Performance. With that in mind, my prefered ROMs in order are:
 
 1. GrapheneOS
+1. DivestOS
+1. LineageOS
 1. CalyxOS
 1. /e/OS
 1. iodéOS
-1. DivestOS
-1. LineageOS (use this if your device isn't supported by the others)
+
+See https://divestos.org/pages/patch_levels#osSecurity
 
 ## Contributing
 
