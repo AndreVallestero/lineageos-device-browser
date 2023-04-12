@@ -85,8 +85,10 @@ for f in listdir(DEVICES_DIR):
         if not isinstance(soc, str):
             if isinstance(soc[0], str):
                 device["soc"] = soc[0]
-            else:
+            elif i < len(soc):
                 device["soc"] = list(soc[i].values())[0]
+            else:
+                device["soc"] = list(soc[0].values())[0]
         devices.append(device)
 
 # Quinary sort by Name
