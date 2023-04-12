@@ -8,7 +8,7 @@ Try it out here: https://andrevallestero.github.io/lineageos-device-browser
 
 ## Unmaintained and Unsupported Devices
 
-If you have an unmaintained deivce, the ROM will not be available on the official site. I suggest checking https://lineageosroms.com, and if a ROM exists, verify it via checksum on the official site.
+If you have an unmaintained deivce, the ROM will not be available on the official site. I suggest checking https://lineageosroms.com, and if a ROM exists, verify it via checksum on the official site. Also check out https://archive.org for any legacy ROMs.
 
 If your device isn't on this list at all, I would suggest checking out the XDA page for your device. There's a chance someone has created an unofficial LineageOS build, but as with any software that you use from an unverified third party, understand the risks and the consequences involved with using such software.
 
