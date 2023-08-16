@@ -27,4 +27,4 @@ See https://divestos.org/pages/patch_levels#osSecurity
 
 ## Contributing
 
-Accepting feature requests and PRs!
+Accepting feature requests and PRs
