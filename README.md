@@ -23,7 +23,12 @@ My priorities when choosing a ROM are Security, Privacy, and Performance. With t
 1. /e/OS
 1. iodéOS
 
-See https://divestos.org/pages/patch_levels#osSecurity
+See
+
+- https://divestos.org/pages/patch_levels#osSecurity
+- https://www.privacyguides.org/en/android/#aosp-derivatives
+
+Also note that it is recommended to use fdroid-basic instead of fdroid
 
 ## Contributing
 
